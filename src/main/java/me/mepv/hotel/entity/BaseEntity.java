@@ -1,4 +1,4 @@
-package me.mepv.hotel.model;
+package me.mepv.hotel.entity;
 
 import lombok.Getter;
 import lombok.Setter;
