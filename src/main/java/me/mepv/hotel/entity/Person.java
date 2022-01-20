@@ -18,7 +18,7 @@ import java.time.LocalDate;
 @Table(name = "persons")
 public class Person extends BaseEntity {
 
-    @Column(unique = true)
+    @Column(unique = true)  // TODO: add validations before inserting into database
     private String dni;
     @Column(name = "first_name")
     private String firstname;

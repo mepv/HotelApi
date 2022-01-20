@@ -21,9 +21,9 @@ public class Room extends BaseEntity {
     private Integer floor;
     private BigDecimal price;
     private Boolean booked = false;
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH}, fetch = FetchType.LAZY)
     @JoinColumn(name = "room_type_id")
-    private RoomType roomTypeId;
+    private RoomType roomType;
     @JoinColumn(name = "hotel_id")
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Hotel hotel;
